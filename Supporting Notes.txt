@@ -1,0 +1,13 @@
+Section 25
+from FPDF import fpdf
+oerientation, units, format
+add_pages method
+output
+set_font
+cell(w,h,txt,align, ln(break line), border
+w=0 is same as max
+height same as font size
+set_text_color
+line(x from border to start, y from border to start, x from start to end, y from end to border) based on units defined earler
+range for loops and nested for loop
+set auto page break (false, 0)
