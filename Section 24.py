@@ -33,6 +33,10 @@ for index, row in df.iterrows():
     ## 9. Create a divider after header with x1 distance from left border to line start, y2 distance from top border to line start, x2 distance from line start to line end, and y2 distance from line end to top border
     pdf.line(10, 25, 200, 25)
 
+    ## 21. Now we do the student project of adding lines to the PDF similar to how a notebook has, each line 10 mm apart.
+    for i in range(25, 275, 10):
+        pdf.line(10, i+10, 200, i+10)
+
     ## 10. Add space using ln method, which represents break line
     pdf.ln(255)
 
@@ -59,6 +63,9 @@ for index, row in df.iterrows():
 
         ## 19. We repeat the code from the previous loop, without the header, and adjust the line breaks
         pdf.add_page()
+        ## 22. We add these lines on pages created by nested loop as well
+        for i in range(25, 275, 10):
+            pdf.line(10, i + 10, 200, i + 10)
         pdf.ln(275)  ## 20. We adjust the line breaks. Since there is no header text, we need to add more line breaks equal to header cell's height
         pdf.line(10, 285, 200, 285)
         pdf.set_font(family="Times", style="B", size=9)
